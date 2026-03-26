@@ -1,0 +1,13 @@
+.brainmap-page { display: flex; flex-direction: column; gap: 24px; }
+.brainmap-layout { display: grid; grid-template-columns: 1fr 280px; gap: 20px; }
+.brainmap-canvas-card { padding: 20px; display: flex; justify-content: center; }
+.brainmap-canvas { max-width: 100%; border-radius: var(--radius-md); }
+.brainmap-sidebar { display: flex; flex-direction: column; gap: 16px; }
+.brainmap-legend-card, .brain-insight-card { padding: 20px; }
+.brainmap-legend-card h3, .brain-insight-card h3 { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 14px; }
+.brain-legend-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(99,102,241,0.04); }
+.brain-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.brain-legend-info { flex: 1; display: flex; justify-content: space-between; }
+.brain-legend-name { font-size: 12px; font-weight: 600; }
+.brain-legend-score { font-family: var(--font-display); font-size: 12px; font-weight: 700; }
+@media (max-width: 900px) { .brainmap-layout { grid-template-columns: 1fr; } }

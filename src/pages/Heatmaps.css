@@ -1,0 +1,25 @@
+.heatmaps-page { display: flex; flex-direction: column; gap: 24px; }
+.heatmap-main, .strength-card, .prod-card, .calendar-card { padding: 24px; }
+.heatmap-main h3, .strength-card h3, .prod-card h3, .calendar-card h3 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.hm-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; }
+.heatmap-container { display: flex; gap: 8px; overflow-x: auto; padding: 8px 0; }
+.heatmap-days { display: flex; flex-direction: column; gap: 3px; }
+.heatmap-days span { height: 14px; font-size: 10px; color: var(--text-muted); display: flex; align-items: center; }
+.heatmap-grid { display: flex; gap: 3px; }
+.heatmap-col { display: flex; flex-direction: column; gap: 3px; }
+.heatmap-cell { width: 14px; height: 14px; border-radius: 3px; cursor: pointer; transition: all 0.15s; }
+.heatmap-legend { display: flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 11px; color: var(--text-muted); }
+.heatmaps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.strength-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+.strength-row { display: flex; align-items: center; gap: 12px; }
+.strength-subject { font-size: 11px; min-width: 85px; color: var(--text-secondary); font-weight: 600; }
+.strength-cells { display: flex; gap: 4px; }
+.strength-cell { width: 44px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; }
+.strength-cell span { font-size: 10px; font-weight: 700; color: white; }
+.strength-legend { display: flex; gap: 14px; font-size: 11px; }
+.perf-calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-header { text-align: center; font-size: 11px; color: var(--text-muted); font-weight: 700; padding: 8px; text-transform: uppercase; letter-spacing: 1px; }
+.cal-day { border-radius: 8px; padding: 8px; text-align: center; cursor: pointer; transition: all 0.15s; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.cal-num { font-size: 14px; font-weight: 700; display: block; }
+.cal-score { font-size: 9px; color: var(--text-secondary); font-family: var(--font-display); }
+@media (max-width: 900px) { .heatmaps-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,146 @@
+.study-buddy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.buddy-body {
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Antenna */
+.buddy-antenna {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -4px;
+}
+
+.buddy-antenna::before {
+  content: '';
+  width: 2px;
+  height: 16px;
+  background: var(--buddy-color, var(--accent-primary));
+  display: block;
+}
+
+.antenna-ball {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--buddy-color, var(--accent-primary));
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulse-glow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px var(--buddy-color, var(--accent-primary));
+}
+
+/* Head */
+.buddy-head {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 2px solid var(--buddy-color, var(--accent-primary));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2),
+              inset 0 0 20px rgba(99, 102, 241, 0.05);
+  position: relative;
+}
+
+.buddy-eyes {
+  font-size: 16px;
+  letter-spacing: 8px;
+  color: var(--buddy-color, var(--accent-primary));
+  animation: none;
+}
+
+.buddy-mouth {
+  font-size: 14px;
+  color: var(--buddy-color, var(--accent-primary));
+}
+
+/* Arms */
+.buddy-arm {
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buddy-arm.left {
+  left: -20px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.buddy-arm.right {
+  right: -20px;
+  animation: wave 2s ease-in-out infinite 0.5s;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+/* Speech Bubble */
+.buddy-speech {
+  position: relative;
+}
+
+.speech-bubble {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border-glass);
+  border-top: 1px solid var(--border-glass);
+}
+
+/* Sizes */
+.study-buddy.small .buddy-head {
+  width: 50px;
+  height: 50px;
+}
+
+.study-buddy.small .buddy-eyes {
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+.study-buddy.small .buddy-mouth {
+  font-size: 10px;
+}
+
+.study-buddy.large .buddy-head {
+  width: 100px;
+  height: 100px;
+}
+
+.study-buddy.large .buddy-eyes {
+  font-size: 20px;
+  letter-spacing: 12px;
+}
+
+.study-buddy.large .buddy-mouth {
+  font-size: 18px;
+}

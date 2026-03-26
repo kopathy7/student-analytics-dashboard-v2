@@ -1,0 +1,47 @@
+.gamification-page { display: flex; flex-direction: column; gap: 24px; }
+.level-card { padding: 32px; }
+.level-hero { display: flex; align-items: center; gap: 32px; }
+.level-circle { position: relative; width: 120px; height: 120px; flex-shrink: 0; }
+.level-circle svg { width: 100%; height: 100%; }
+.level-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-display); font-size: 36px; font-weight: 900; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.level-info { flex: 1; }
+.level-info h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: 2px; margin-bottom: 6px; }
+.xp-text { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
+.total-xp { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+.streak-hero { text-align: center; flex-shrink: 0; }
+.streak-flames { font-size: 48px; animation: streak-fire 2s ease-in-out infinite; display: block; }
+.streak-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent-orange); display: block; }
+.streak-text { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.gamification-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 20px; }
+.badges-card, .missions-card, .daily-card { padding: 24px; }
+.badges-card h3, .missions-card h3, .daily-card h3 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.badge-section { margin-bottom: 20px; }
+.badge-section-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.badges-earned-grid, .badges-locked-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.badge-full { padding: 16px 12px; text-align: center; border-radius: var(--radius-md); border: 1px solid rgba(99,102,241,0.08); display: flex; flex-direction: column; align-items: center; gap: 4px; transition: all var(--transition-normal); }
+.badge-full.earned { background: rgba(99,102,241,0.04); }
+.badge-full.earned:hover { border-color: var(--accent-primary); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+.badge-full.locked { background: rgba(100,116,139,0.04); opacity: 0.6; }
+.badge-emoji { font-size: 28px; }
+.badge-name { font-size: 11px; font-weight: 700; }
+.badge-desc { font-size: 10px; color: var(--text-muted); }
+.badge-date { font-size: 9px; color: var(--text-muted); }
+.badge-progress { width: 100%; margin-top: 4px; }
+.missions-col { display: flex; flex-direction: column; gap: 16px; }
+.mission-item { padding: 16px; background: rgba(99,102,241,0.04); border-radius: var(--radius-md); margin-bottom: 12px; border-left: 3px solid var(--accent-primary); }
+.mission-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.mission-header h4 { font-size: 14px; font-weight: 700; }
+.mission-xp { font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--accent-secondary); }
+.mission-desc { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; }
+.mission-progress { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.mission-progress span { font-family: var(--font-display); font-size: 12px; font-weight: 700; }
+.mission-deadline { font-size: 11px; color: var(--text-muted); }
+.daily-item { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: var(--radius-sm); border: 1px solid rgba(99,102,241,0.06); margin-bottom: 8px; transition: all var(--transition-fast); }
+.daily-item.done { opacity: 0.5; }
+.daily-icon { font-size: 20px; }
+.daily-info { flex: 1; }
+.daily-title { font-size: 13px; font-weight: 600; display: block; }
+.daily-xp { font-size: 11px; color: var(--accent-secondary); font-weight: 600; }
+.daily-check { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border-glass); display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.daily-check.checked { background: var(--accent-success); border-color: var(--accent-success); color: white; font-weight: 700; }
+@media (max-width: 900px) { .gamification-grid { grid-template-columns: 1fr; } .level-hero { flex-direction: column; text-align: center; } }
