@@ -1,0 +1,27 @@
+.analytics-page { display: flex; flex-direction: column; gap: 24px; }
+.ai-tags-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.analytics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.analytics-grid h3 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.analytics-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.weak-topics-card, .consistency-card { padding: 24px; }
+.weak-topics-card h3, .consistency-card h3 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.weak-list { display: flex; flex-direction: column; gap: 12px; }
+.weak-item { display: flex; flex-direction: column; gap: 6px; padding: 10px; background: rgba(99,102,241,0.03); border-radius: var(--radius-sm); }
+.weak-info { display: flex; align-items: center; gap: 10px; }
+.weak-severity { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.weak-severity.critical { background: var(--accent-danger); box-shadow: 0 0 8px rgba(239,68,68,0.5); }
+.weak-severity.warning { background: var(--accent-warning); }
+.weak-severity.low { background: var(--accent-primary); }
+.weak-chapter { font-weight: 600; font-size: 13px; display: block; }
+.weak-subject { font-size: 11px; color: var(--text-muted); }
+.weak-bar-wrap { display: flex; align-items: center; gap: 8px; }
+.weak-pct { font-family: var(--font-display); font-size: 12px; font-weight: 700; min-width: 35px; text-align: right; }
+.consistency-gauge { text-align: center; margin: 10px 0; position: relative; }
+.gauge-svg { width: 180px; }
+.gauge-value { font-family: var(--font-display); font-size: 36px; font-weight: 900; margin-top: -30px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.gauge-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+.consistency-details { display: flex; flex-direction: column; gap: 10px; }
+.cons-item { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 12px; background: rgba(99,102,241,0.03); border-radius: var(--radius-sm); }
+.cons-item span { color: var(--text-secondary); }
+.cons-item strong { color: var(--text-primary); }
+@media (max-width: 900px) { .analytics-grid, .analytics-bottom { grid-template-columns: 1fr; } }
