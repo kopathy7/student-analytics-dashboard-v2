@@ -1,0 +1,34 @@
+.social-page { display: flex; flex-direction: column; gap: 24px; }
+.social-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 20px; }
+.friends-card, .groups-card, .collab-board { padding: 24px; }
+.friends-card h3, .groups-card h3, .collab-board h3 { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.friends-list { display: flex; flex-direction: column; gap: 12px; }
+.friend-item { display: flex; align-items: center; gap: 14px; padding: 12px; background: rgba(99,102,241,0.03); border-radius: var(--radius-md); }
+.friend-left { display: flex; align-items: center; gap: 10px; min-width: 160px; }
+.friend-avatar { font-size: 28px; }
+.friend-name { font-size: 13px; font-weight: 700; display: block; }
+.friend-level { font-size: 10px; color: var(--accent-secondary); font-family: var(--font-display); }
+.friend-score-compare { flex: 1; }
+.compare-bar { display: flex; flex-direction: column; gap: 4px; }
+.compare-you, .compare-them { height: 6px; border-radius: 3px; font-size: 0; }
+.compare-you { background: var(--gradient-primary); }
+.compare-them { background: rgba(100,116,139,0.3); }
+.groups-list { display: flex; flex-direction: column; gap: 10px; }
+.group-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: rgba(99,102,241,0.03); border-radius: var(--radius-md); }
+.group-avatar { font-size: 24px; }
+.group-info { flex: 1; }
+.group-name { font-size: 13px; font-weight: 700; display: block; }
+.group-meta { font-size: 11px; color: var(--text-muted); }
+.group-status { font-size: 11px; font-weight: 600; }
+.group-status.active { color: var(--accent-success); }
+.collab-grid { display: flex; flex-direction: column; gap: 10px; }
+.collab-item { display: flex; align-items: center; gap: 14px; padding: 14px; background: rgba(99,102,241,0.03); border-radius: var(--radius-md); transition: all var(--transition-fast); }
+.collab-item.highlighted { background: rgba(99,102,241,0.08); border-left: 3px solid var(--accent-primary); }
+.collab-item:hover { background: var(--bg-hover); }
+.collab-rank { font-family: var(--font-display); font-size: 16px; font-weight: 800; min-width: 30px; }
+.collab-avatar { font-size: 28px; }
+.collab-info { flex: 1; }
+.collab-name { font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+.collab-stats { font-size: 11px; color: var(--text-secondary); display: flex; gap: 12px; }
+.collab-medal { font-size: 24px; }
+@media (max-width: 900px) { .social-grid { grid-template-columns: 1fr; } }
